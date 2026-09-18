@@ -1,17 +1,20 @@
 # Knife Library
 
-Prototype site for knifelibrary.com — a research archive for Case XX pocketknife collectors.
+The knifelibrary.com site — a research archive for Case XX pocketknife collectors.
 
 ## What's here
 
-- `index.html` — home page
-- `patterns.html` — Patterns & Models reference
-- `tang-stamps.html` — Tang Stamps & Dating timeline
-- `materials.html` — Handle Materials reference
-- `styles.css` — shared styling for all pages
+This is a plain static site (HTML, CSS, and vanilla JavaScript — no framework, no build step), so it deploys on Vercel with zero configuration, same as before.
 
-This is a plain static site (no build step, no framework), so it deploys on Vercel with zero configuration.
+- `index.html` — home page
+- `patterns.html` + `patterns/*.html` — Patterns & Models, with search/filter and a page per pattern
+- `materials.html` + `materials/*.html` — Handle Materials, with search/filter and a page per material
+- `tang-stamps.html` — the tang stamp dating timeline
+- `identify.html` — the "Identify a Knife" tool (filter by blade count and handle shape)
+- `data/patterns.json`, `data/materials.json` — the content that drives the search/filter pages and detail pages
+- `js/` — the search, filter, and identify-tool logic
+- `styles.css` — shared styling
 
 ## Updating this site
 
-Any time you want something changed, describe it to Claude and it will update these files and give you a new version to upload — you don't need to edit anything by hand.
+Any time you want something changed — new patterns, corrected data, a different look, real photos swapped in for the placeholders — describe it to Claude and it'll make the change and give you a new version to upload. You don't need to edit anything by hand.

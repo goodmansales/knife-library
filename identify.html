@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Identify a Knife — Knife Library</title>
+  <meta name="description" content="Answer a couple of questions about blade count and handle shape to narrow down a Case XX pocketknife pattern." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <span class="brand-mark">XX</span>
+        <span class="brand-name">Knife Library</span>
+      </a>
+      <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/patterns.html">Patterns &amp; Models</a>
+        <a href="/tang-stamps.html">Tang Stamps &amp; Dating</a>
+        <a href="/materials.html">Handle Materials</a>
+        <a href="/identify.html" aria-current="page">Identify a Knife</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="wrap">
+      <p class="hero-eyebrow">Tool</p>
+      <h1>Identify a knife</h1>
+      <p class="lede">Not sure what pattern you're holding? Count the blades and look at the handle shape, then answer below — this narrows the field, it won't always land on one exact answer, especially for patterns that share a shape or blade count.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="identify-panel">
+        <fieldset class="identify-field">
+          <legend>How many blades does it have?</legend>
+          <div class="option-row" id="blade-options">
+            <button type="button" class="option-btn" data-blade="1">1</button>
+            <button type="button" class="option-btn" data-blade="2">2</button>
+            <button type="button" class="option-btn" data-blade="3">3</button>
+            <button type="button" class="option-btn" data-blade="4+">4+</button>
+          </div>
+        </fieldset>
+
+        <fieldset class="identify-field">
+          <legend>What shape is the handle?</legend>
+          <div class="option-row" id="shape-options">
+            <button type="button" class="option-btn" data-shape="straight">Straight</button>
+            <button type="button" class="option-btn" data-shape="serpentine">Serpentine</button>
+            <button type="button" class="option-btn" data-shape="humped">Humped (congress)</button>
+            <button type="button" class="option-btn" data-shape="rounded">Small &amp; rounded</button>
+            <button type="button" class="option-btn" data-shape="pointed">Pointed ends</button>
+            <button type="button" class="option-btn" data-shape="elongated">Elongated</button>
+            <button type="button" class="option-btn" data-shape="double-ended">Double-ended</button>
+          </div>
+        </fieldset>
+
+        <button type="button" class="reset-link" id="reset-btn" hidden>Clear answers</button>
+      </div>
+
+      <div class="identify-results">
+        <h2 id="results-heading">All patterns</h2>
+        <p class="match-count" id="match-count"></p>
+        <p class="empty-state" id="empty-state" hidden>No pattern in the archive matches that combination yet — double-check the blade count, or clear an answer and try again.</p>
+        <div class="pattern-grid" id="pattern-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <p class="foot-brand">Knife Library</p>
+        <p>An independent, collector-run reference project. Not affiliated with or endorsed by W.R. Case &amp; Sons Cutlery Co. "Case" and "Case XX" are trademarks of their respective owner.</p>
+      </div>
+      <nav>
+        <a href="/patterns.html">Patterns</a>
+        <a href="/tang-stamps.html">Tang Stamps</a>
+        <a href="/materials.html">Materials</a>
+        <a href="/identify.html">Identify</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/js/identify.js"></script>
+</body>
+</html>
