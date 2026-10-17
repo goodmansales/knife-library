@@ -1,23 +1,28 @@
 /* ============================================================
    Knife Library — global stylesheet
-   A card-catalog / archive aesthetic for Case XX collectors.
+   High-contrast reference theme: white pages, near-black text, navy accents.
    ============================================================ */
 
 :root {
-  --paper: #EDE6D6;
-  --paper-dim: #E2D9C4;
-  --ink: #211D18;
-  --ink-soft: #4A4237;
-  --oxblood: #6B1F26;
-  --oxblood-dark: #551419;
-  --brass: #A8813C;
-  --brass-light: #C9A46A;
-  --walnut: #35241A;
-  --walnut-dark: #241811;
-  --olive: #5C6047;
-  --line: rgba(33, 29, 24, 0.16);
-  --line-strong: rgba(33, 29, 24, 0.35);
-  --shadow-card: 0 1px 0 rgba(33,29,24,0.06), 0 8px 24px -18px rgba(33,29,24,0.4);
+  --paper: #FFFFFF;
+  --paper-dim: #F4F6F9;
+  --ink: #16191D;
+  --ink-soft: #3B424C;
+  --oxblood: #1C4F8C;
+  --oxblood-dark: #153C6C;
+  --brass: #C08A2E;
+  --brass-light: #F3C76E;
+  --walnut: #13263D;
+  --walnut-dark: #0D1B2C;
+  --olive: #3E5C46;
+  --tint: #E8EFF8;
+  --tint-border: #B9CBE3;
+  --on-dark: #FFFFFF;
+  --on-dark-soft: #D5DDE8;
+  --line: rgba(22, 25, 29, 0.14);
+  --line-strong: rgba(22, 25, 29, 0.34);
+  --shadow-card: 0 1px 0 rgba(22,25,29,0.05), 0 8px 24px -18px rgba(22,25,29,0.35);
+  --shadow-hover: 0 1px 0 rgba(22,25,29,0.06), 0 16px 30px -18px rgba(22,25,29,0.45);
 
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -26,38 +31,48 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #1B1712;
-    --paper-dim: #221C15;
-    --ink: #EFE7D8;
-    --ink-soft: #C8BCA6;
-    --oxblood: #C24C4F;
-    --oxblood-dark: #9C3A3D;
-    --brass: #D2A85E;
-    --brass-light: #E4C787;
-    --walnut: #120C08;
-    --walnut-dark: #0A0705;
-    --olive: #8B9270;
-    --line: rgba(239, 231, 216, 0.14);
-    --line-strong: rgba(239, 231, 216, 0.3);
+    --paper: #121417;
+    --paper-dim: #1C2026;
+    --ink: #F2F4F7;
+    --ink-soft: #C9D0D9;
+    --oxblood: #8DB8F5;
+    --oxblood-dark: #6E9FE6;
+    --brass: #E3B65C;
+    --brass-light: #F3C76E;
+    --walnut: #0A1522;
+    --walnut-dark: #060E18;
+    --olive: #9DBBA3;
+    --tint: #1D2A3B;
+    --tint-border: #34506F;
+    --on-dark: #FFFFFF;
+    --on-dark-soft: #C9D3DF;
+    --line: rgba(242, 244, 247, 0.14);
+    --line-strong: rgba(242, 244, 247, 0.32);
     --shadow-card: 0 1px 0 rgba(0,0,0,0.4), 0 8px 24px -18px rgba(0,0,0,0.7);
+    --shadow-hover: 0 1px 0 rgba(0,0,0,0.5), 0 16px 30px -18px rgba(0,0,0,0.8);
   }
 }
 
 :root[data-theme="dark"] {
-  --paper: #1B1712;
-  --paper-dim: #221C15;
-  --ink: #EFE7D8;
-  --ink-soft: #C8BCA6;
-  --oxblood: #C24C4F;
-  --oxblood-dark: #9C3A3D;
-  --brass: #D2A85E;
-  --brass-light: #E4C787;
-  --walnut: #120C08;
-  --walnut-dark: #0A0705;
-  --olive: #8B9270;
-  --line: rgba(239, 231, 216, 0.14);
-  --line-strong: rgba(239, 231, 216, 0.3);
+  --paper: #121417;
+  --paper-dim: #1C2026;
+  --ink: #F2F4F7;
+  --ink-soft: #C9D0D9;
+  --oxblood: #8DB8F5;
+  --oxblood-dark: #6E9FE6;
+  --brass: #E3B65C;
+  --brass-light: #F3C76E;
+  --walnut: #0A1522;
+  --walnut-dark: #060E18;
+  --olive: #9DBBA3;
+  --tint: #1D2A3B;
+  --tint-border: #34506F;
+  --on-dark: #FFFFFF;
+  --on-dark-soft: #C9D3DF;
+  --line: rgba(242, 244, 247, 0.14);
+  --line-strong: rgba(242, 244, 247, 0.32);
   --shadow-card: 0 1px 0 rgba(0,0,0,0.4), 0 8px 24px -18px rgba(0,0,0,0.7);
+  --shadow-hover: 0 1px 0 rgba(0,0,0,0.5), 0 16px 30px -18px rgba(0,0,0,0.8);
 }
 
 * { box-sizing: border-box; }
@@ -88,7 +103,7 @@ button { font-family: inherit; }
 
 .site-header {
   background: var(--walnut);
-  color: var(--paper);
+  color: var(--on-dark);
   border-bottom: 3px solid var(--brass);
 }
 
@@ -107,7 +122,7 @@ button { font-family: inherit; }
   align-items: baseline;
   gap: 10px;
   text-decoration: none;
-  color: var(--paper);
+  color: var(--on-dark);
 }
 
 .brand-mark {
@@ -135,22 +150,21 @@ button { font-family: inherit; }
 
 .main-nav a {
   text-decoration: none;
-  color: var(--paper);
+  color: var(--on-dark-soft);
   font-size: 15px;
   padding: 8px 12px;
   border-radius: 3px;
-  opacity: 0.82;
   transition: opacity 0.15s ease, background 0.15s ease;
 }
 
 .main-nav a:hover,
 .main-nav a:focus-visible {
-  opacity: 1;
-  background: rgba(201, 164, 106, 0.16);
+  color: var(--on-dark);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .main-nav a[aria-current="page"] {
-  opacity: 1;
+  background: rgba(255, 255, 255, 0.10);
   color: var(--brass-light);
   font-weight: 600;
 }
@@ -234,12 +248,12 @@ button { font-family: inherit; }
 .drawer:hover,
 .drawer:focus-visible {
   transform: translateY(-3px);
-  box-shadow: 0 1px 0 rgba(33,29,24,0.08), 0 16px 30px -18px rgba(33,29,24,0.5);
+  box-shadow: var(--shadow-hover);
 }
 
 .drawer-label {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--oxblood);
   margin: 0 0 12px;
 }
@@ -337,12 +351,12 @@ button { font-family: inherit; }
   padding: 10px 14px;
   border: 1px solid var(--line-strong);
   border-radius: 2px;
-  background: var(--paper-dim);
+  background: var(--paper);
   color: var(--ink);
 }
 
 .search-input:focus-visible {
-  outline: 2px solid var(--brass);
+  outline: 2px solid var(--oxblood);
   outline-offset: 1px;
 }
 
@@ -359,12 +373,12 @@ button { font-family: inherit; }
   border: 1px solid var(--line-strong);
   border-radius: 20px;
   background: transparent;
-  color: var(--ink-soft);
+  color: var(--ink);
   cursor: pointer;
   transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
-.chip:hover { border-color: var(--brass); color: var(--ink); }
+.chip:hover { border-color: var(--oxblood); color: var(--ink); }
 
 .chip.active {
   background: var(--walnut);
@@ -399,7 +413,7 @@ button { font-family: inherit; }
 
 a.pattern-card:hover,
 a.pattern-card:focus-visible {
-  border-color: var(--brass);
+  border-color: var(--oxblood);
   transform: translateY(-2px);
   box-shadow: var(--shadow-card);
 }
@@ -413,10 +427,10 @@ a.pattern-card:focus-visible {
 
 .badge {
   font-family: var(--font-mono);
-  font-size: 12px;
-  color: var(--brass);
-  background: rgba(168, 129, 60, 0.12);
-  border: 1px solid rgba(168, 129, 60, 0.35);
+  font-size: 13px;
+  color: var(--oxblood);
+  background: var(--tint);
+  border: 1px solid var(--tint-border);
   display: inline-block;
   padding: 2px 8px;
   border-radius: 2px;
@@ -430,13 +444,13 @@ a.pattern-card:focus-visible {
 }
 
 .pattern-card p {
-  font-size: 14.5px;
+  font-size: 15px;
   color: var(--ink-soft);
   margin: 0 0 10px;
 }
 
 .pattern-card .card-link {
-  font-size: 13.5px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--oxblood);
 }
@@ -457,7 +471,7 @@ a.pattern-card:focus-visible {
   margin-bottom: 20px;
 }
 
-.back-link:hover { color: var(--oxblood); }
+.back-link:hover { color: var(--oxblood); text-decoration: underline; }
 
 .detail-head h1 {
   font-family: var(--font-display);
@@ -478,7 +492,8 @@ a.pattern-card:focus-visible {
 }
 
 .detail-body {
-  padding: 40px 0 64px;
+  padding-top: 40px;
+  padding-bottom: 64px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 40px;
@@ -590,11 +605,12 @@ a.pattern-card:focus-visible {
 
 .stamp-note {
   margin-top: 40px;
-  background: rgba(168, 129, 60, 0.1);
-  border: 1px solid rgba(168, 129, 60, 0.3);
+  background: var(--tint);
+  border: 1px solid var(--tint-border);
+  border-left: 4px solid var(--oxblood);
   border-radius: 2px;
   padding: 18px 20px;
-  font-size: 14.5px;
+  font-size: 15px;
   color: var(--ink-soft);
 }
 
@@ -631,7 +647,7 @@ a.pattern-card:focus-visible {
 }
 
 .dot-count {
-  color: var(--brass);
+  color: var(--oxblood);
   letter-spacing: 1px;
   flex: 1;
   overflow: hidden;
@@ -640,7 +656,7 @@ a.pattern-card:focus-visible {
 
 .yk-count {
   color: var(--ink-soft);
-  font-size: 11.5px;
+  font-size: 13px;
 }
 
 /* ---------- Materials swatches ---------- */
@@ -664,7 +680,7 @@ a.pattern-card:focus-visible {
 
 a.material-card:hover,
 a.material-card:focus-visible {
-  border-color: var(--brass);
+  border-color: var(--oxblood);
   transform: translateY(-2px);
   box-shadow: var(--shadow-card);
 }
@@ -691,7 +707,7 @@ a.material-card:focus-visible {
 
 .material-era {
   font-family: var(--font-mono);
-  font-size: 11.5px;
+  font-size: 13px;
   color: var(--ink-soft);
   margin-top: 10px;
 }
@@ -715,7 +731,7 @@ a.material-card:focus-visible {
   margin-bottom: 36px;
 }
 
-.identify-field { margin-bottom: 22px; }
+.identify-field { margin: 0 0 22px; padding: 0; border: 0; min-width: 0; }
 .identify-field:last-child { margin-bottom: 0; }
 
 .identify-field legend {
@@ -743,12 +759,13 @@ a.material-card:focus-visible {
   transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
 }
 
-.option-btn:hover { border-color: var(--brass); }
+.option-btn:hover { border-color: var(--oxblood); }
 
 .option-btn.active {
   background: var(--oxblood);
   border-color: var(--oxblood);
   color: var(--paper);
+  font-weight: 600;
 }
 
 .reset-link {
@@ -780,7 +797,7 @@ a.material-card:focus-visible {
 
 .site-footer {
   background: var(--walnut-dark);
-  color: var(--paper);
+  color: var(--on-dark);
   margin-top: 40px;
 }
 
@@ -800,8 +817,8 @@ a.material-card:focus-visible {
 }
 
 .site-footer p {
-  font-size: 13.5px;
-  color: rgba(237, 230, 214, 0.65);
+  font-size: 14px;
+  color: var(--on-dark-soft);
   max-width: 46ch;
   margin: 0;
 }
@@ -814,7 +831,7 @@ a.material-card:focus-visible {
 }
 
 .site-footer nav a {
-  color: rgba(237, 230, 214, 0.8);
+  color: var(--on-dark-soft);
   text-decoration: none;
   font-size: 14px;
 }
@@ -825,7 +842,7 @@ a.material-card:focus-visible {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--brass);
+  outline: 3px solid var(--brass);
   outline-offset: 2px;
 }
 
