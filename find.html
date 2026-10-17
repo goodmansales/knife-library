@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Find Your Knife — Knife Library</title>
+  <meta name="description" content="Search Case XX patterns, handle materials and tang stamp eras by whatever details you know." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">
+        <span class="brand-mark">XX</span>
+        <span class="brand-name">Knife Library</span>
+      </a>
+      <nav class="main-nav" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/find.html" aria-current="page">Find Your Knife</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/login.html">Log In</a>
+        <a href="/join.html" class="nav-cta">BECOME A MEMBER</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="wrap">
+      <p class="hero-eyebrow">Research tool</p>
+      <h1>Find your knife</h1>
+      <p class="lede">Fill in whatever you know about your knife: a pattern name or number, how many blades it has, the handle, or what's stamped on the tang. Use as many or as few boxes as you like. Results update as you type.</p>
+    </div>
+  </section>
+
+  <section class="wrap search-section">
+    <form class="search-panel" id="find-form" autocomplete="off" onsubmit="return false;">
+      <div class="search-group">
+        <h2 class="search-group-title">The knife itself</h2>
+        <div class="search-fields">
+          <label class="field">
+            <span class="field-label">Pattern name or number</span>
+            <input class="field-input" type="search" id="f-pattern" placeholder="e.g. Trapper, 6254">
+          </label>
+          <label class="field">
+            <span class="field-label">Number of blades</span>
+            <select class="field-input" id="f-blades">
+              <option value="">Any</option>
+              <option value="1">1 blade</option>
+              <option value="2">2 blades</option>
+              <option value="3">3 blades</option>
+              <option value="4+">4 or more blades</option>
+            </select>
+          </label>
+          <label class="field">
+            <span class="field-label">Handle shape</span>
+            <select class="field-input" id="f-shape">
+              <option value="">Any</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="search-group">
+        <h2 class="search-group-title">Handle material</h2>
+        <div class="search-fields">
+          <label class="field">
+            <span class="field-label">Material or color</span>
+            <input class="field-input" type="search" id="f-material" placeholder="e.g. amber bone, stag, pearl">
+          </label>
+        </div>
+      </div>
+
+      <div class="search-group">
+        <h2 class="search-group-title">Tang stamp &amp; age</h2>
+        <div class="search-fields">
+          <label class="field">
+            <span class="field-label">Words on the tang stamp</span>
+            <input class="field-input" type="search" id="f-stamp" placeholder="e.g. Tested, U.S.A., Bradford">
+          </label>
+          <label class="field">
+            <span class="field-label">Year you think it was made</span>
+            <input class="field-input" type="number" inputmode="numeric" id="f-year" placeholder="e.g. 1975" min="1880" max="2100">
+          </label>
+        </div>
+      </div>
+
+      <div class="search-actions">
+        <p class="match-count" id="find-summary" aria-live="polite"></p>
+        <button type="button" class="reset-btn" id="find-reset">Clear all boxes</button>
+      </div>
+    </form>
+
+    <div class="result-group" id="r-patterns">
+      <div class="result-head">
+        <h2>Patterns</h2>
+        <span class="section-note" id="r-patterns-count"></span>
+      </div>
+      <div class="pattern-grid" id="r-patterns-grid"></div>
+      <p class="empty-state" id="r-patterns-empty" hidden>No patterns match those details. Try clearing a box, or check the spelling of a pattern name.</p>
+    </div>
+
+    <div class="result-group" id="r-materials" hidden>
+      <div class="result-head">
+        <h2>Handle materials</h2>
+        <span class="section-note" id="r-materials-count"></span>
+      </div>
+      <div class="material-grid" id="r-materials-grid"></div>
+      <p class="empty-state" id="r-materials-empty" hidden>No handle materials match that. Try a shorter word, like "bone" or "stag".</p>
+    </div>
+
+    <div class="result-group" id="r-stamps" hidden>
+      <div class="result-head">
+        <h2>Tang stamp eras</h2>
+        <span class="section-note" id="r-stamps-count"></span>
+      </div>
+      <div class="stamp-results" id="r-stamps-list"></div>
+      <p class="empty-state" id="r-stamps-empty" hidden>No stamp era matches that. Try one word from the stamp, like "Tested" or "USA".</p>
+    </div>
+
+    <p class="stamp-note find-note"><strong>Good to know:</strong> pattern, handle material and tang stamp results are shown separately for now. As real catalog records are added, these searches will be linked so you can look up one specific knife.</p>
+
+    <div class="browse-links">
+      <h2>Browse the full references</h2>
+      <div class="browse-grid">
+        <a href="/patterns.html">Patterns &amp; models</a>
+        <a href="/tang-stamps.html">Tang stamps &amp; dating</a>
+        <a href="/materials.html">Handle materials</a>
+        <a href="/identify.html">Identify by blades &amp; shape</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div>
+        <p class="foot-brand">Knife Library</p>
+        <p>An independent, collector-run reference project. Not affiliated with or endorsed by W.R. Case &amp; Sons Cutlery Co. "Case" and "Case XX" are trademarks of their respective owner.</p>
+      </div>
+      <nav aria-label="Reference">
+        <a href="/find.html">Find Your Knife</a>
+        <a href="/patterns.html">Patterns</a>
+        <a href="/tang-stamps.html">Tang Stamps</a>
+        <a href="/materials.html">Materials</a>
+        <a href="/identify.html">Identify</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="/js/find.js"></script>
+
+</body>
+</html>
